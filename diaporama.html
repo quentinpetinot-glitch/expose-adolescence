@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADOLESCENCE — Diaporama</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#050505;color:#fff;overflow:hidden;height:100vh}
+.fond{position:fixed;inset:0;z-index:0}.fond img{width:100%;height:100%;object-fit:cover;opacity:.25}
+.fond::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,.88))}
+.bar{position:fixed;top:0;left:0;height:4px;width:0%;z-index:20;background:linear-gradient(90deg,#E50914,#ff6a00);transition:width .5s;box-shadow:0 0 14px #E50914}
+.top{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:15px 26px;background:linear-gradient(180deg,rgba(0,0,0,.7),transparent)}
+.logo{font-weight:900;color:#E50914;letter-spacing:3px}.logo span{color:#fff;font-weight:300;font-size:12px;margin-left:8px}
+.num{opacity:.7;font-size:14px;letter-spacing:2px}
+.slides{position:relative;z-index:2;height:100vh}
+.slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:80px 5vw 100px;opacity:0;visibility:hidden;transform:translateX(90px) scale(1.05);filter:blur(12px);transition:all .8s cubic-bezier(.22,1,.36,1)}
+.slide.active{opacity:1;visibility:visible;transform:none;filter:none}
+.card{max-width:1060px;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;background:rgba(10,10,10,.78);border:1px solid rgba(255,255,255,.13);border-radius:24px;padding:38px 40px;backdrop-filter:blur(16px);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.card.center{grid-template-columns:1fr;text-align:center}
+h1{font-size:clamp(46px,7vw,86px);font-weight:900;line-height:.95;color:transparent;-webkit-text-stroke:2px #fff;background:url('https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg') center/cover;-webkit-background-clip:text;background-clip:text}
+h1 b{color:#E50914;-webkit-text-stroke:0;background:none}
+h2{font-size:clamp(26px,3.5vw,42px);margin-bottom:12px}h2 em{color:#E50914;font-style:normal}
+.tag{background:#E50914;display:inline-block;padding:7px 16px;border-radius:100px;font-size:12px;font-weight:800;letter-spacing:2px;margin-bottom:14px}
+.txt{line-height:1.65;opacity:.88;font-size:16px;margin-top:10px}
+ul{list-style:none;margin-top:12px}ul li{padding:9px 0 9px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px}ul li::before{content:'▸';position:absolute;left:6px;color:#E50914;font-weight:900}
+img.ph{width:100%;height:430px;object-fit:cover;object-position:top;border-radius:16px;border:1px solid rgba(255,255,255,.15);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.stats{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}.stat{flex:1;min-width:110px;text-align:center;background:rgba(229,9,20,.14);border:1px solid #e5091455;border-radius:12px;padding:14px}.stat b{font-size:28px;display:block}.stat span{font-size:11px;opacity:.65;text-transform:uppercase}
+.ctrl{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:10px;align-items:center;background:rgba(0,0,0,.65);padding:10px 18px;border-radius:100px;border:1px solid rgba(255,255,255,.15)}
+button{border:0;cursor:pointer;border-radius:100px;padding:11px 20px;font-weight:700}
+.prev{background:rgba(255,255,255,.12);color:#fff}.next{background:#E50914;color:#fff}
+.dots{display:flex;gap:7px}.dot{width:9px;height:9px;border-radius:99px;background:rgba(255,255,255,.25);padding:0}.dot.on{width:28px;background:#E50914}
+a.back{color:#fff;background:rgba(255,255,255,.12);padding:11px 18px;border-radius:100px;font-size:14px;font-weight:700}
+@media(max-width:850px){.card{grid-template-columns:1fr;padding:26px 20px}img.ph{height:250px}}
+</style>
+</head>
+<body>
+<div class="fond"><img src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""></div>
+<div class="bar" id="bar"></div>
+<div class="top"><div class="logo">ADOLESCENCE <span>DIAPORAMA</span></div><div class="num" id="num">01 / 07</div></div>
+<div class="slides" id="slides">
+<div class="slide active"><div class="card"><div><div class="tag">NETFLIX • 13 MARS 2025</div><h1>AD0LES<b>CENCE</b></h1><p class="txt">Un crime. Un garçon de 13 ans. Un plan-séquence.<br><b>La série N°1 dans 80+ pays.</b></p><div class="stats"><div class="stat"><b>100M+</b><span>vues</span></div><div class="stat"><b>98%</b><span>tomatoes</span></div><div class="stat"><b>8.1</b><span>IMDb</span></div></div></div><img class="ph" src="https://media.themoviedb.org/t/p/w500/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg" alt="Affiche officielle"></div></div>
+<div class="slide"><div class="card"><div><div class="tag">01 • HISTOIRE</div><h2>Un matin <em>qui bascule</em></h2><p class="txt">6h : la police arrête <b>Jamie, 13 ans</b>, pour le meurtre de Katie.</p><ul><li>Enquête en temps réel, sans flashback</li><li>Famille normale face à l'impensable</li><li>Réseaux, incel, harcèlement au cœur</li></ul></div><img class="ph" src="https://media.themoviedb.org/t/p/w1280/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Série" style="object-position:center"></div></div>
+<div class="slide"><div class="card"><div><div class="tag">02 • JAMIE</div><h2>Owen <em>Cooper</em></h2><p class="txt">14 ans, jamais joué avant. 500 auditionnés.</p><ul><li>EP3 : 52 min face à la psy</li><li>Emmy + Golden Globe, plus jeune lauréat</li></ul></div><img class="ph" src="https://media.themoviedb.org/t/p/w500/zdV9mPv6QD89jgdaqW3w9TEn5bA.jpg" alt="Owen Cooper"></div></div>
+<div class="slide"><div class="card"><div><div class="tag">03 • LE PÈRE</div><h2>Stephen <em>Graham</em></h2><p class="txt"><b>Eddie Miller</b>. Aussi co-créateur avec Jack Thorne.</p><ul><li>This Is England, Boiling Point</li><li>Final culte : il borde l'ours en pleurs</li></ul></div><img class="ph" src="https://media.themoviedb.org/t/p/w500/yguEO9zFvuccq87kOJpFLsmUgvs.jpg" alt="Stephen Graham"></div></div>
+<div class="slide"><div class="card"><div><div class="tag">04 • PSY & FLIC</div><h2>Briony <em>& Bascombe</em></h2><ul><li><b>Erin Doherty</b> : la psy du huis-clos</li><li><b>Ashley Walters</b> : l'inspecteur père dépassé</li><li>EP2 : ils découvrent les codes ados</li></ul></div><img class="ph" src="https://media.themoviedb.org/t/p/w500/brqo9iAILtnkWj1WaQKUCNxLGfQ.jpg" alt="Erin Doherty"></div></div>
+<div class="slide"><div class="card"><div><div class="tag">05 • PLAN-SÉQUENCE</div><h2>1 épisode = <em>1 prise</em></h2><ul><li>Zéro coupure, réal. Philip Barantini</li><li>3 semaines de répètes, 10 prises / épisode</li><li>Drone + 300 figurants synchros</li><li>Erreur à la 50e min = on recommence</li></ul></div><img class="ph" src="https://media.themoviedb.org/t/p/w500/jSazpnwfMqbIuBGjnB8r0Yb5l7H.jpg" alt="Ashley Walters"></div></div>
+<div class="slide"><div class="card center"><div><div class="tag">FIN • DÉBAT</div><h2>Victime <em>ou coupable ?</em></h2><p class="txt">Qui est responsable ? Lui ? Parents ? École ? Internet ?<br><a href="index.html" style="color:#E50914;font-weight:800">← Retour à l'exposé</a></p></div></div></div>
+</div>
+<div class="ctrl"><button class="prev" onclick="go(-1)">←</button><div class="dots" id="dots"></div><button class="next" onclick="go(1)">→</button><a class="back" href="index.html">Exposé</a></div>
+<script>
+let i=0;const s=[...document.querySelectorAll('.slide')],n=s.length,num=document.getElementById('num'),bar=document.getElementById('bar'),box=document.getElementById('dots');
+s.forEach((_,k)=>{const d=document.createElement('button');d.className='dot'+(k?'':' on');d.onclick=e=>{e.stopPropagation();show(k)};box.appendChild(d)});
+const dots=[...box.children];
+function show(k){s[i].classList.remove('active');i=(k+n)%n;s[i].classList.add('active');num.textContent=String(i+1).padStart(2,'0')+' / '+String(n).padStart(2,'0');bar.style.width=((i+1)/n*100)+'%';dots.forEach((d,j)=>d.classList.toggle('on',j===i))}
+function go(d){show(i+d)}
+addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')go(1);if(e.key==='ArrowLeft')go(-1)});
+addEventListener('click',e=>{if(!e.target.closest('button')&&!e.target.closest('a'))go(1)});
+show(0);
+</script>
+</body>
+</html>
