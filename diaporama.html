@@ -7,9 +7,20 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;background:#000;color:#fff;font-family:'Segoe UI',system-ui,sans-serif;overflow:hidden}
-.slide{position:fixed;inset:0;opacity:0;visibility:hidden;transition:opacity .7s ease;z-index:1}
-.slide.active{opacity:1;visibility:visible;z-index:2}
-.slide img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slide{position:fixed;inset:0;opacity:0;visibility:hidden;z-index:1;transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1),filter .8s ease}
+.slide.active{opacity:1;visibility:visible;z-index:2;transform:none!important;filter:none!important}
+.slide[data-fx="fade"]{transform:scale(1.04)}
+.slide[data-fx="left"]{transform:translateX(100px) scale(1.05);filter:blur(8px)}
+.slide[data-fx="right"]{transform:translateX(-100px) scale(1.05);filter:blur(8px)}
+.slide[data-fx="up"]{transform:translateY(80px) scale(1.06)}
+.slide[data-fx="zoom"]{transform:scale(1.18);filter:blur(6px)}
+.slide[data-fx="blur"]{transform:scale(1.08);filter:blur(18px)}
+.slide img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.slide.active img.bg{animation:kb 8s ease-out forwards}
+@keyframes kb{from{transform:scale(1.18)}to{transform:scale(1.05)}}
+.slide .cont>*{opacity:0;transform:translateY(26px);transition:all .7s ease}
+.slide.active .cont>*{opacity:1;transform:none}
+.slide.active .cont>*:nth-child(2){transition-delay:.12s}.slide.active .cont>*:nth-child(3){transition-delay:.24s}
 .slide::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.45) 55%,rgba(0,0,0,.15)),linear-gradient(0deg,rgba(0,0,0,.7),transparent 50%)}
 .cont{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:8vh 7vw;max-width:900px}
 .tag{background:#E50914;align-self:flex-start;padding:8px 18px;border-radius:100px;font-size:13px;font-weight:800;letter-spacing:2px;margin-bottom:20px}
@@ -30,13 +41,13 @@ button{border:0;cursor:pointer;border-radius:50%;width:60px;height:60px;font-siz
 <div class="bar" id="bar"></div>
 <div class="top"><span>ADOLESCENCE • DIAPORAMA</span><span id="num">01 / 07</span><a href="index.html">✕ Exposé</a></div>
 
-<div class="slide active"><img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">NETFLIX • 13 MARS 2025 • 4 ÉPISODES</div><h1>AD0LES<b>CENCE</b></h1><p>Un crime. Un garçon de 13 ans. Un plan-séquence. N°1 dans 80+ pays, 100M+ vues.</p></div></div>
-<div class="slide"><img class="bg" src="https://media.themoviedb.org/t/p/w1280/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">01 • HISTOIRE</div><h2>Un matin qui bascule</h2><p>6h du matin : la police arrête Jamie, 13 ans, pour le meurtre de Katie. Enquête en temps réel, famille en choc, réseaux et culture incel au cœur.</p></div></div>
-<div class="slide"><img class="bg" src="https://media.themoviedb.org/t/p/w500/zdV9mPv6QD89jgdaqW3w9TEn5bA.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">02 • JAMIE MILLER</div><h2>Owen Cooper</h2><p>14 ans, jamais joué avant. 500 auditionnés. 52 minutes face à la psy. Emmy + Golden Globe.</p></div></div>
-<div class="slide"><img class="bg" src="https://media.themoviedb.org/t/p/w500/yguEO9zFvuccq87kOJpFLsmUgvs.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">03 • LE PÈRE</div><h2>Stephen Graham</h2><p>Eddie Miller, plombier dévasté. Co-créateur de la série. Final culte : il borde l'ours en pleurs.</p></div></div>
-<div class="slide"><img class="bg" src="https://media.themoviedb.org/t/p/w500/brqo9iAILtnkWj1WaQKUCNxLGfQ.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">04 • PSY & ENQUÊTE</div><h2>Briony & Bascombe</h2><p>Erin Doherty, la psy du huis-clos. Ashley Walters, l'inspecteur père dépassé par les codes ados.</p></div></div>
-<div class="slide"><img class="bg" src="https://media.themoviedb.org/t/p/w500/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg" alt="" style="object-position:center"><div class="cont"><div class="tag">05 • PLAN-SÉQUENCE</div><h2>1 épisode = 1 prise</h2><p>Zéro coupure. Philip Barantini. 3 semaines de répètes, drone, 300 figurants. Erreur à la 50e minute = on recommence.</p></div></div>
-<div class="slide"><img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">FIN • DÉBAT</div><h2>Victime ou coupable ?</h2><p>Qui est responsable ? Lui ? Parents ? École ? Internet ?</p></div></div>
+<div class="slide active" data-fx="fade"><img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">NETFLIX • 13 MARS 2025 • 4 ÉPISODES</div><h1>AD0LES<b>CENCE</b></h1><p>Un crime. Un garçon de 13 ans. Un plan-séquence. N°1 dans 80+ pays, 100M+ vues.</p></div></div>
+<div class="slide" data-fx="left"><img class="bg" src="https://media.themoviedb.org/t/p/w1280/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">01 • HISTOIRE</div><h2>Un matin qui bascule</h2><p>6h du matin : la police arrête Jamie, 13 ans, pour le meurtre de Katie. Enquête en temps réel, famille en choc, réseaux et culture incel au cœur.</p></div></div>
+<div class="slide" data-fx="zoom"><img class="bg" src="https://media.themoviedb.org/t/p/w500/zdV9mPv6QD89jgdaqW3w9TEn5bA.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">02 • JAMIE MILLER</div><h2>Owen Cooper</h2><p>14 ans, jamais joué avant. 500 auditionnés. 52 minutes face à la psy. Emmy + Golden Globe.</p></div></div>
+<div class="slide" data-fx="right"><img class="bg" src="https://media.themoviedb.org/t/p/w500/yguEO9zFvuccq87kOJpFLsmUgvs.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">03 • LE PÈRE</div><h2>Stephen Graham</h2><p>Eddie Miller, plombier dévasté. Co-créateur de la série. Final culte : il borde l'ours en pleurs.</p></div></div>
+<div class="slide" data-fx="up"><img class="bg" src="https://media.themoviedb.org/t/p/w500/brqo9iAILtnkWj1WaQKUCNxLGfQ.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">04 • PSY & ENQUÊTE</div><h2>Briony & Bascombe</h2><p>Erin Doherty, la psy du huis-clos. Ashley Walters, l'inspecteur père dépassé par les codes ados.</p></div></div>
+<div class="slide" data-fx="blur"><img class="bg" src="https://media.themoviedb.org/t/p/w500/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg" alt="" style="object-position:center"><div class="cont"><div class="tag">05 • PLAN-SÉQUENCE</div><h2>1 épisode = 1 prise</h2><p>Zéro coupure. Philip Barantini. 3 semaines de répètes, drone, 300 figurants. Erreur à la 50e minute = on recommence.</p></div></div>
+<div class="slide" data-fx="fade"><img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">FIN • DÉBAT</div><h2>Victime ou coupable ?</h2><p>Qui est responsable ? Lui ? Parents ? École ? Internet ?</p></div></div>
 
 <div class="nav"><button class="prev" onclick="go(-1)">←</button><div class="c">← → / espace / clic • F11 plein écran</div><button class="next" onclick="go(1)">→</button></div>
 <script>
