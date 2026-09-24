@@ -1,114 +1,122 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ADOLESCENCE — Exposé</title>
+<title>ADOLESCENCE — My Presentation (Simple English)</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:#050505;color:#fff;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:24px;padding:14px 28px;background:rgba(0,0,0,.7);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:22px;padding:14px 28px;background:rgba(0,0,0,.7);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
 .logo{font-weight:900;color:#E50914;letter-spacing:3px}
-.links{display:flex;gap:18px;font-size:14px;font-weight:600}
-.links a{opacity:.75}.links a:hover{color:#E50914;opacity:1}
-.btn{background:#E50914;color:#fff;padding:11px 24px;border-radius:100px;font-weight:800;font-size:14px;border:0;cursor:pointer;display:inline-block}
-/* HERO avec fond série + titre transparent */
+.links{display:flex;gap:16px;font-size:14px;font-weight:600}
+.links a{opacity:.75;color:#fff;text-decoration:none}.links a:hover{color:#E50914;opacity:1}
+.btn{background:#E50914;color:#fff;padding:11px 24px;border-radius:100px;font-weight:800;font-size:14px;border:0;cursor:pointer;display:inline-block;text-decoration:none}
 .hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center}
-.hero img.fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.1)}
+.hero img.fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35) 40%,#050505 98%)}
 .hero-inner{position:relative;z-index:2;padding:0 5vw}
-.top-tag{background:#E50914;display:inline-block;padding:8px 20px;border-radius:100px;font-size:12px;font-weight:800;letter-spacing:2px;margin-bottom:18px;box-shadow:0 10px 30px #e5091466}
-h1.geant{font-size:clamp(60px,13vw,170px);font-weight:900;line-height:.9;letter-spacing:-2px;
-color:transparent;-webkit-text-stroke:2px #fff;
-background:url('https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg') center/cover;
--webkit-background-clip:text;background-clip:text;
-filter:drop-shadow(0 10px 40px rgba(0,0,0,.8));}
-h1.geant span{display:block;color:#E50914;-webkit-text-stroke:0;background:none;-webkit-background-clip:border-box;font-size:.45em;letter-spacing:8px;margin-top:8px}
-.sous{max-width:640px;margin:18px auto 26px;opacity:.9;line-height:1.7;font-size:17px;text-shadow:0 2px 20px #000}
+.top-tag{background:#E50914;display:inline-block;padding:8px 20px;border-radius:100px;font-size:12px;font-weight:800;letter-spacing:2px;margin-bottom:18px}
+h1.geant{font-size:clamp(60px,13vw,170px);font-weight:900;line-height:.9;letter-spacing:-2px;color:transparent;-webkit-text-stroke:2px #fff;background:url('https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg') center/cover;-webkit-background-clip:text;background-clip:text}
+h1.geant span{display:block;color:#E50914;-webkit-text-stroke:0;background:none;font-size:.35em;letter-spacing:6px;margin-top:10px}
+.sous{max-width:660px;margin:18px auto 26px;line-height:1.7;font-size:17px;text-shadow:0 2px 20px #000}
 .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn-ghost{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3)}
-.scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;opacity:.6;font-size:13px;animation:bounce 1.8s infinite}
-@keyframes bounce{50%{transform:translate(-50%,8px)}}
-.wrap{max-width:1150px;margin:0 auto;padding:70px 5vw}
-h2{font-size:clamp(28px,4vw,46px);font-weight:900;margin-bottom:8px}
+.wrap{max-width:1000px;margin:0 auto;padding:64px 5vw}
+h2{font-size:clamp(26px,4vw,42px);font-weight:900;margin-bottom:8px}
 h2 em{color:#E50914;font-style:normal}
-.sub{opacity:.6;margin-bottom:28px}
-.bandeau{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.12);min-height:340px;display:flex;align-items:end}
-.bandeau img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.bandeau .txt{position:relative;z-index:2;padding:34px;background:linear-gradient(0deg,rgba(0,0,0,.9),transparent);width:100%}
-.bandeau .txt p{line-height:1.7;opacity:.9;max-width:800px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:10px}
-.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;overflow:hidden;transition:.35s}
-.card:hover{transform:translateY(-7px);border-color:#E50914}
-.card img{height:300px;width:100%;object-fit:cover;object-position:top}
-.card .inf{padding:18px}.card .inf h3{font-size:17px}.card .inf p{font-size:13px;opacity:.65;margin-top:6px;line-height:1.55}
-.role{color:#E50914;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
-.ep{background:#0e0e0e;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px 22px;margin-top:12px;border-left:4px solid #E50914;line-height:1.6}
-.ep b{color:#E50914}
-.titre-fond{font-size:clamp(40px,8vw,100px);font-weight:900;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.35);text-align:center;margin:20px 0;letter-spacing:2px}
-.stats{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}
-.stat{flex:1;min-width:140px;text-align:center;border:1px solid #e5091455;border-radius:16px;padding:20px;background:rgba(229,9,20,.08)}
-.stat b{font-size:34px;display:block}.stat span{font-size:11px;opacity:.6;text-transform:uppercase}
-.reveal{opacity:0;transform:translateY(30px);transition:.8s}.reveal.visible{opacity:1;transform:none}
-footer{background:#000;border-top:1px solid rgba(255,255,255,.1);padding:30px;text-align:center;font-size:12px;opacity:.7;line-height:1.8}
-@media(max-width:800px){.links{display:none}h1.geant{-webkit-text-stroke:1.3px #fff}}
+.sub{opacity:.6;margin-bottom:20px}
+.box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px;margin-top:14px;line-height:1.8;font-size:17px}
+.box b{color:#fff}.box .red{color:#E50914;font-weight:800}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:17px}
+td,th{border:1px solid rgba(255,255,255,.15);padding:12px;text-align:left}
+th{background:rgba(229,9,20,.25)}
+ul.simple{margin-top:12px;line-height:2;font-size:17px;list-style:none}
+ul.simple li::before{content:'▸ ';color:#E50914;font-weight:900}
+.actors{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:14px}
+.actor{background:#101010;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden}
+.actor img{height:260px;width:100%;object-fit:cover;object-position:top}
+.actor div{padding:14px;font-size:14px}.actor h3{font-size:16px}
+footer{background:#000;border-top:1px solid rgba(255,255,255,.1);padding:28px;text-align:center;font-size:12px;opacity:.7;line-height:1.8}
+@media(max-width:800px){.links{display:none}}
 </style>
 </head>
 <body>
-<nav><div class="logo">ADOLESCENCE</div><div class="links"><a href="#histoire">Histoire</a><a href="#acteurs">Acteurs</a><a href="#episodes">Épisodes</a><a href="#tournage">Tournage</a><a href="diaporama.html">Diaporama</a></div><div style="margin-left:auto"><a class="btn" href="diaporama.html">▶ Diaporama</a></div></nav>
+<nav><div class="logo">ADOLESCENCE</div><div class="links"><a href="#watch">Watch</a><a href="#episodes">Episodes</a><a href="#story">Story</a><a href="#why">Why I like it</a><a href="diaporama.html">Slides</a></div><div style="margin-left:auto"><a class="btn" href="diaporama.html">▶ Slides</a></div></nav>
 
 <header class="hero">
-<img class="fond" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Fond officiel série Adolescence">
+<img class="fond" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Adolescence background">
 <div class="hero-inner">
-<div class="top-tag">EXPOSÉ • SÉRIE NETFLIX • 13 MARS 2025</div>
-<h1 class="geant">ADOLESCENCE<span>4 ÉPISODES • PLAN-SÉQUENCE</span></h1>
-<p class="sous">Jamie Miller, 13 ans, arrêté pour meurtre. Chaque épisode filmé en une seule prise. La série qui a choqué 100 millions de spectateurs.</p>
-<div class="hero-btns"><a class="btn" href="#histoire">Commencer ↓</a><a class="btn btn-ghost" href="https://www.youtube.com/watch?v=qVeaS9Rl4tU" target="_blank" rel="noopener">▶ Trailer</a></div>
+<div class="top-tag">MY PRESENTATION • SIMPLE ENGLISH • 1ÈRE BAC PRO</div>
+<h1 class="geant">ADOLESCENCE<span>NETFLIX SERIES 2025</span></h1>
+<p class="sous">Hello! Today I present the series <b>Adolescence</b>. It is a short English series. It is famous in the world.</p>
+<div class="hero-btns"><a class="btn" href="#watch">Start ↓</a><a class="btn btn-ghost" href="diaporama.html">▶ See the slides</a></div>
 </div>
-<div class="scroll">▼ scroll ▼</div>
 </header>
 
-<section id="histoire" class="wrap reveal">
-<h2>L'histoire <em>en 30 secondes</em></h2>
-<p class="sub">Une fiction inspirée de faits divers anglais.</p>
-<div class="bandeau"><img src="https://media.themoviedb.org/t/p/w1280/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Image série"><div class="txt"><p><b>6h du matin.</b> La police défonce la porte des Miller. <b>Jamie, 13 ans</b>, est accusé du meurtre de Katie Leonard. Son père Eddie s'effondre. L'enquête révèle Instagram, emojis codés, insultes incel. La psy Briony affronte Jamie 52 minutes en huis-clos. 13 mois après : une famille brisée, sans Jamie à l'écran.</p></div></div>
-<div class="stats"><div class="stat"><b>100M+</b><span>vues</span></div><div class="stat"><b>N°1</b><span>80+ pays</span></div><div class="stat"><b>98%</b><span>Rotten Tomatoes</span></div><div class="stat"><b>8</b><span>Emmys</span></div></div>
-</section>
-
-<div class="titre-fond">JAMIE • 13 ANS</div>
-
-<section id="acteurs" class="wrap reveal">
-<h2>Les <em>acteurs</em> — vraies photos</h2>
-<p class="sub">Photos officielles TMDB.</p>
-<div class="grid">
-<div class="card"><img loading="lazy" src="https://media.themoviedb.org/t/p/w500/zdV9mPv6QD89jgdaqW3w9TEn5bA.jpg" alt="Owen Cooper"><div class="inf"><div class="role">Jamie Miller</div><h3>Owen Cooper</h3><p>14 ans, jamais joué avant. 500 auditionnés. Emmy + Golden Globe.</p></div></div>
-<div class="card"><img loading="lazy" src="https://media.themoviedb.org/t/p/w500/yguEO9zFvuccq87kOJpFLsmUgvs.jpg" alt="Stephen Graham"><div class="inf"><div class="role">Eddie Miller • père</div><h3>Stephen Graham</h3><p>Co-créateur. This Is England, Boiling Point. Final en larmes culte.</p></div></div>
-<div class="card"><img loading="lazy" src="https://media.themoviedb.org/t/p/w500/brqo9iAILtnkWj1WaQKUCNxLGfQ.jpg" alt="Erin Doherty"><div class="inf"><div class="role">Briony • psy</div><h3>Erin Doherty</h3><p>The Crown. Épisode 3 : 52 min de face-à-face, meilleur épisode 2025.</p></div></div>
-<div class="card"><img loading="lazy" src="https://media.themoviedb.org/t/p/w500/jSazpnwfMqbIuBGjnB8r0Yb5l7H.jpg" alt="Ashley Walters"><div class="inf"><div class="role">DI Bascombe</div><h3>Ashley Walters</h3><p>Top Boy. L'inspecteur père dépassé par les codes ados.</p></div></div>
+<section id="watch" class="wrap">
+<h2>1. Where to watch ? <em>Free or not ?</em></h2>
+<p class="sub">Simple answer.</p>
+<div class="box">
+<b>You can watch <span class="red">Adolescence</span> only on Netflix.</b><br>
+Website : netflix.com/title/81756069<br><br>
+Is it free ? <b>No, it is not free.</b> You need a Netflix account.<br>
+It costs money every month. In France it is about <b>8 euros per month</b> with ads. It is a subscription.<br><br>
+You can watch on phone, computer or TV.
 </div>
 </section>
 
-<section id="episodes" class="wrap reveal">
-<h2>Les 4 <em>épisodes</em></h2>
-<p class="sub">Durées officielles Netflix.</p>
-<div class="ep"><b>EP1 • 1h05 — L'Arrestation :</b> perquisition, garde à vue. Choc comme la famille.</div>
-<div class="ep"><b>EP2 • 51 min — L'École :</b> collège, cyber-harcèlement, emojis secrets.</div>
-<div class="ep"><b>EP3 • 52 min — La Psy :</b> huis-clos Jamie / Briony. Le plus terrifiant.</div>
-<div class="ep"><b>EP4 • 1h02 — La Famille :</b> 13 mois après. Peut-on encore s'aimer ?</div>
+<section id="episodes" class="wrap">
+<h2>2. Seasons <em>and episodes</em></h2>
+<p class="sub">How long ? How many ?</p>
+<div class="box">
+There is <b>only 1 season</b>. It is a <b>limited series</b>. There is no season 2.<br>
+There are <b>4 episodes</b> in total. It is a short story, about 4 hours.
+<table>
+<tr><th>Episode</th><th>Title</th><th>Time</th></tr>
+<tr><td>1</td><td>The Arrest</td><td>65 minutes</td></tr>
+<tr><td>2</td><td>The School</td><td>51 minutes</td></tr>
+<tr><td>3</td><td>The Psychologist</td><td>52 minutes</td></tr>
+<tr><td>4</td><td>The Family</td><td>62 minutes</td></tr>
+</table>
+</div>
 </section>
 
-<section id="tournage" class="wrap reveal">
-<h2>Tournage <em>plan-séquence</em></h2>
-<p class="sub">Par Philip Barantini. 1 épisode = 1 prise, zéro coupure.</p>
-<div class="bandeau"><img src="https://media.themoviedb.org/t/p/w500/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg" alt="Affiche officielle" style="object-position:center"><div class="txt"><p>Caméra + drone + 300 figurants synchros. 3 semaines de répètes, 10 prises par épisode. Erreur à la 50e minute = on recommence tout. Thèmes : manosphere, incel, parents dépassés, école impuissante.</p><p style="margin-top:10px"><b>Question débat : qui est responsable ? Lui ? Parents ? École ? Internet ?</b></p></div></div>
+<section id="story" class="wrap">
+<h2>3. The story : <em>what happens ?</em></h2>
+<p class="sub">No difficult words. I explain simply.</p>
+<div class="box">
+Jamie Miller is <b>13 years old</b>. He lives in England with his mum, his dad and his sister.<br><br>
+One morning, the police come to his house. They arrest Jamie. He is accused of killing Katie, a girl from his school.<br><br>
+Jamie says : <b>"I did nothing."</b> His father is shocked. He cries.<br><br>
+The police work. They go to the school. They see bad messages on Instagram. Some boys insult girls. It is cyberbullying.<br><br>
+A psychologist talks with Jamie. It is a long talk, 52 minutes. Jamie is angry, then sad, then strange.<br><br>
+At the end, we see the family one year later. Life is hard. The father cries in the room of his son.
+</div>
+<div class="actors">
+<div class="actor"><img loading="lazy" src="https://media.themoviedb.org/t/p/w500/zdV9mPv6QD89jgdaqW3w9TEn5bA.jpg" alt="Owen Cooper"><div><h3>Owen Cooper = Jamie</h3>He is 15 years old. First role. Very good.</div></div>
+<div class="actor"><img loading="lazy" src="https://media.themoviedb.org/t/p/w500/yguEO9zFvuccq87kOJpFLsmUgvs.jpg" alt="Stephen Graham"><div><h3>Stephen Graham = Eddie</h3>He is the father. He is sad.</div></div>
+<div class="actor"><img loading="lazy" src="https://media.themoviedb.org/t/p/w500/brqo9iAILtnkWj1WaQKUCNxLGfQ.jpg" alt="Erin Doherty"><div><h3>Erin Doherty = Briony</h3>She is the psychologist.</div></div>
+</div>
 </section>
 
-<footer>Exposé ADOLESCENCE • Netflix 13/03/2025 • Jack Thorne & Stephen Graham<br>Images : TMDB / Netflix à but scolaire • Trailer : youtube.com/watch?v=qVeaS9Rl4tU</footer>
-<script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-window.addEventListener('scroll',()=>{document.querySelector('.fond').style.transform=`scale(1.1) translateY(${scrollY*0.15}px)`});
-</script>
+<section id="why" class="wrap">
+<h2>4. Why I like <em>Adolescence</em></h2>
+<p class="sub">My opinion. I invent, simple English.</p>
+<div class="box">
+<ul class="simple">
+<li><b>I like the story.</b> It is strong. I think about my phone and school.</li>
+<li><b>I like the actors.</b> Owen Cooper is young but he plays very well. The father cries for real, I think.</li>
+<li><b>I like the camera.</b> One episode = one shot, no cut. It is like real life. I feel stress.</li>
+<li><b>I like episode 3.</b> Only two people talk in a room. It is simple but scary.</li>
+<li><b>I learn a lesson.</b> Words on the internet can hurt. Parents must talk with children.</li>
+</ul>
+<br>
+<b>Conclusion :</b> I love this series. It is short, 4 episodes. I recommend it to my class. Thank you for listening!
+</div>
+</section>
+
+<footer>Presentation by a 1ère Bac Pro student • Series : Adolescence, Netflix 13 March 2025 • Creators Jack Thorne & Stephen Graham<br>Photos : TMDB / Netflix for school • Trailer : youtube.com/watch?v=qVeaS9Rl4tU</footer>
 </body>
 </html>

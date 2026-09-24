@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ADOLESCENCE — Diaporama plein écran</title>
+<title>ADOLESCENCE — Slides (Simple English)</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;background:#000;color:#fff;font-family:'Segoe UI',system-ui,sans-serif;overflow:hidden}
@@ -18,38 +18,40 @@ html,body{height:100%;background:#000;color:#fff;font-family:'Segoe UI',system-u
 .slide img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
 .slide.active img.bg{animation:kb 8s ease-out forwards}
 @keyframes kb{from{transform:scale(1.18)}to{transform:scale(1.05)}}
-.slide .cont>*{opacity:0;transform:translateY(26px);transition:all .7s ease}
-.slide.active .cont>*{opacity:1;transform:none}
-.slide.active .cont>*:nth-child(2){transition-delay:.12s}.slide.active .cont>*:nth-child(3){transition-delay:.24s}
-.slide::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.45) 55%,rgba(0,0,0,.15)),linear-gradient(0deg,rgba(0,0,0,.7),transparent 50%)}
+.slide::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.45) 55%,rgba(0,0,0,.15)),linear-gradient(0deg,rgba(0,0,0,.7),transparent 50%)}
 .cont{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:8vh 7vw;max-width:900px}
 .tag{background:#E50914;align-self:flex-start;padding:8px 18px;border-radius:100px;font-size:13px;font-weight:800;letter-spacing:2px;margin-bottom:20px}
-h1{font-size:clamp(56px,10vw,130px);font-weight:900;line-height:.92;color:transparent;-webkit-text-stroke:2px #fff}
+h1{font-size:clamp(52px,10vw,120px);font-weight:900;line-height:.92;color:transparent;-webkit-text-stroke:2px #fff}
 h1 b{color:#E50914;-webkit-text-stroke:0}
-h2{font-size:clamp(34px,5vw,64px);font-weight:900;line-height:1;text-shadow:0 4px 30px #000}
-p{font-size:clamp(16px,2vw,22px);line-height:1.6;margin-top:16px;text-shadow:0 2px 16px #000;opacity:.92;max-width:640px}
-.top{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 30px;background:linear-gradient(180deg,rgba(0,0,0,.6),transparent);font-weight:800;letter-spacing:2px;font-size:14px}
+h2{font-size:clamp(32px,5vw,60px);font-weight:900;text-shadow:0 4px 30px #000}
+p{font-size:clamp(16px,2vw,21px);line-height:1.65;margin-top:16px;text-shadow:0 2px 16px #000;max-width:640px}
+.top{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 30px;background:linear-gradient(180deg,rgba(0,0,0,.6),transparent);font-weight:800;font-size:14px;letter-spacing:2px}
 .top a{color:#fff;background:rgba(255,255,255,.15);padding:10px 20px;border-radius:100px;text-decoration:none}
 .bar{position:fixed;top:0;left:0;height:4px;background:#E50914;z-index:11;width:0%;transition:width .5s}
 .nav{position:fixed;bottom:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:24px 30px;background:linear-gradient(0deg,rgba(0,0,0,.6),transparent)}
-.nav .c{opacity:.7}
 button{border:0;cursor:pointer;border-radius:50%;width:60px;height:60px;font-size:24px;font-weight:900}
 .prev{background:rgba(255,255,255,.15);color:#fff}.next{background:#E50914;color:#fff}
 </style>
 </head>
 <body>
 <div class="bar" id="bar"></div>
-<div class="top"><span>ADOLESCENCE • DIAPORAMA</span><span id="num">01 / 07</span><a href="index.html">✕ Exposé</a></div>
+<div class="top"><span>ADOLESCENCE • SIMPLE ENGLISH</span><span id="num">01 / 07</span><a href="index.html">✕ Site</a></div>
 
-<div class="slide active" data-fx="fade"><img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">NETFLIX • 13 MARS 2025 • 4 ÉPISODES</div><h1>AD0LES<b>CENCE</b></h1><p>Un crime. Un garçon de 13 ans. Un plan-séquence. N°1 dans 80+ pays, 100M+ vues.</p></div></div>
-<div class="slide" data-fx="left"><img class="bg" src="https://media.themoviedb.org/t/p/w1280/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">01 • HISTOIRE</div><h2>Un matin qui bascule</h2><p>6h du matin : la police arrête Jamie, 13 ans, pour le meurtre de Katie. Enquête en temps réel, famille en choc, réseaux et culture incel au cœur.</p></div></div>
-<div class="slide" data-fx="zoom"><img class="bg" src="https://media.themoviedb.org/t/p/w500/zdV9mPv6QD89jgdaqW3w9TEn5bA.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">02 • JAMIE MILLER</div><h2>Owen Cooper</h2><p>14 ans, jamais joué avant. 500 auditionnés. 52 minutes face à la psy. Emmy + Golden Globe.</p></div></div>
-<div class="slide" data-fx="right"><img class="bg" src="https://media.themoviedb.org/t/p/w500/yguEO9zFvuccq87kOJpFLsmUgvs.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">03 • LE PÈRE</div><h2>Stephen Graham</h2><p>Eddie Miller, plombier dévasté. Co-créateur de la série. Final culte : il borde l'ours en pleurs.</p></div></div>
-<div class="slide" data-fx="up"><img class="bg" src="https://media.themoviedb.org/t/p/w500/brqo9iAILtnkWj1WaQKUCNxLGfQ.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">04 • PSY & ENQUÊTE</div><h2>Briony & Bascombe</h2><p>Erin Doherty, la psy du huis-clos. Ashley Walters, l'inspecteur père dépassé par les codes ados.</p></div></div>
-<div class="slide" data-fx="blur"><img class="bg" src="https://media.themoviedb.org/t/p/w500/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg" alt="" style="object-position:center"><div class="cont"><div class="tag">05 • PLAN-SÉQUENCE</div><h2>1 épisode = 1 prise</h2><p>Zéro coupure. Philip Barantini. 3 semaines de répètes, drone, 300 figurants. Erreur à la 50e minute = on recommence.</p></div></div>
-<div class="slide" data-fx="fade"><img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">FIN • DÉBAT</div><h2>Victime ou coupable ?</h2><p>Qui est responsable ? Lui ? Parents ? École ? Internet ?</p></div></div>
+<div class="slide active" data-fx="fade"><img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">MY PRESENTATION • HELLO !</div><h1>AD0LES<b>CENCE</b></h1><p>Today I present a Netflix series. It is short and famous. Simple English, level 1ère.</p></div></div>
 
-<div class="nav"><button class="prev" onclick="go(-1)">←</button><div class="c">← → / espace / clic • F11 plein écran</div><button class="next" onclick="go(1)">→</button></div>
+<div class="slide" data-fx="left"><img class="bg" src="https://media.themoviedb.org/t/p/w500/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg" alt="" style="object-position:center"><div class="cont"><div class="tag">1 • WHERE TO WATCH ?</div><h2>Only on Netflix. Not free.</h2><p>You need a Netflix account. It costs about 8 euros per month. You can watch on phone, computer or TV.</p></div></div>
+
+<div class="slide" data-fx="zoom"><img class="bg" src="https://media.themoviedb.org/t/p/w1280/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">2 • EPISODES ?</div><h2>1 season. 4 episodes.</h2><p>Episode 1 = 65 min. Episode 2 = 51 min. Episode 3 = 52 min. Episode 4 = 62 min. No season 2. Total = 4 hours.</p></div></div>
+
+<div class="slide" data-fx="right"><img class="bg" src="https://media.themoviedb.org/t/p/w500/zdV9mPv6QD89jgdaqW3w9TEn5bA.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">3 • THE STORY</div><h2>Jamie is 13 years old.</h2><p>Police arrest Jamie. He is accused of killing Katie, a school girl. He says "I did nothing". His father cries. Police go to school. Bad messages on Instagram.</p></div></div>
+
+<div class="slide" data-fx="up"><img class="bg" src="https://media.themoviedb.org/t/p/w500/yguEO9zFvuccq87kOJpFLsmUgvs.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">3 • THE STORY (2)</div><h2>A long talk. A sad family.</h2><p>A psychologist talks with Jamie, 52 minutes. Jamie is angry, then sad. One year later, the family is broken. Life is hard.</p></div></div>
+
+<div class="slide" data-fx="blur"><img class="bg" src="https://media.themoviedb.org/t/p/w500/brqo9iAILtnkWj1WaQKUCNxLGfQ.jpg" alt="" style="object-position:top"><div class="cont"><div class="tag">4 • WHY I LIKE IT</div><h2>I love this series.</h2><p>I like the actors. I like the camera, one shot, no cut. Episode 3 is scary but great. Words on internet can hurt. Thank you !</p></div></div>
+
+<div class="slide" data-fx="fade"><img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt=""><div class="cont"><div class="tag">THANK YOU !</div><h2>Any questions ?</h2><p>4 episodes. Netflix. Short and strong. I recommend it.</p></div></div>
+
+<div class="nav"><button class="prev" onclick="go(-1)">←</button><div style="opacity:.7">← → / space / click</div><button class="next" onclick="go(1)">→</button></div>
 <script>
 let i=0;const s=[...document.querySelectorAll('.slide')],n=s.length,num=document.getElementById('num'),bar=document.getElementById('bar');
 function show(k){s[i].classList.remove('active');i=(k+n)%n;s[i].classList.add('active');num.textContent=String(i+1).padStart(2,'0')+' / '+String(n).padStart(2,'0');bar.style.width=((i+1)/n*100)+'%'}
