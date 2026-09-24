@@ -15,25 +15,20 @@ html,body{height:100%;background:#000;color:#fff;font-family:'Segoe UI',system-u
 .slide[data-fx="up"]{transform:translateY(80px) scale(1.06)}
 .slide[data-fx="zoom"]{transform:scale(1.15);filter:blur(6px)}
 .slide[data-fx="blur"]{transform:scale(1.08);filter:blur(18px)}
-.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.slide::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.55) 60%,rgba(0,0,0,.25))}
-.layout{position:absolute;inset:0;z-index:2;display:grid;grid-template-columns:1.1fr .8fr;gap:40px;align-items:center;padding:10vh 6vw}
-.layout.center{grid-template-columns:1fr;text-align:center;justify-items:center}
-.tag{background:#E50914;justify-self:start;padding:8px 18px;border-radius:100px;font-size:13px;font-weight:800;letter-spacing:2px;margin-bottom:18px}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.slide::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.45) 60%,rgba(0,0,0,.15))}
+.cont{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:10vh 7vw;max-width:880px}
+.tag{background:#E50914;align-self:flex-start;padding:8px 18px;border-radius:100px;font-size:13px;font-weight:800;letter-spacing:2px;margin-bottom:18px}
 h1{font-size:clamp(52px,9vw,110px);font-weight:900;line-height:.92;color:transparent;-webkit-text-stroke:2px #fff}
 h1 b{color:#E50914;-webkit-text-stroke:0}
 h2{font-size:clamp(30px,4.5vw,54px);font-weight:900;text-shadow:0 4px 30px #000}
-p{font-size:clamp(15px,1.9vw,20px);line-height:1.65;margin-top:14px;text-shadow:0 2px 16px #000;max-width:620px}
-.side{width:100%;max-width:340px;justify-self:end;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.2);box-shadow:0 20px 60px rgba(0,0,0,.6);background:#111}
-.side img{width:100%;height:440px;object-fit:cover;object-position:top;display:block}
-.side span{display:block;padding:10px 14px;font-size:12px;opacity:.6}
+p{font-size:clamp(15px,1.9vw,20px);line-height:1.65;margin-top:14px;text-shadow:0 2px 16px #000;max-width:640px}
 .top{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 30px;background:linear-gradient(180deg,rgba(0,0,0,.6),transparent);font-weight:800;font-size:14px;letter-spacing:2px}
 .top a{color:#fff;background:rgba(255,255,255,.15);padding:10px 20px;border-radius:100px;text-decoration:none}
 .bar{position:fixed;top:0;left:0;height:4px;background:#E50914;z-index:11;width:0%;transition:width .5s}
 .nav{position:fixed;bottom:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:24px 30px;background:linear-gradient(0deg,rgba(0,0,0,.6),transparent)}
 button{border:0;cursor:pointer;border-radius:50%;width:60px;height:60px;font-size:24px;font-weight:900}
 .prev{background:rgba(255,255,255,.15);color:#fff}.next{background:#E50914;color:#fff}
-@media(max-width:850px){.layout{grid-template-columns:1fr;gap:16px;padding-top:12vh}.side{justify-self:start;max-width:100%}.side img{height:220px}}
 </style>
 </head>
 <body>
@@ -41,43 +36,36 @@ button{border:0;cursor:pointer;border-radius:50%;width:60px;height:60px;font-siz
 <div class="top"><span>ADOLESCENCE • SIMPLE ENGLISH</span><span id="num">01 / 08</span><a href="index.html">✕ Site</a></div>
 
 <div class="slide active" data-fx="fade">
-<img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series background">
-<div class="layout"><div><div class="tag">MY PRESENTATION • HELLO !</div><h1>AD0LES<b>CENCE</b></h1><p>Today I present a Netflix series. It is short and famous. 1 season, 4 episodes.</p></div>
-<div class="side"><img src="https://media.themoviedb.org/t/p/w500/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg" alt="Official poster"><span>Official poster — Netflix</span></div></div></div>
+<img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series">
+<div class="cont"><div class="tag">MY PRESENTATION • HELLO !</div><h1>AD0LES<b>CENCE</b></h1><p>Today I present a Netflix series. It is short and famous. 1 season, 4 episodes.</p></div></div>
 
 <div class="slide" data-fx="left">
-<img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series background">
-<div class="layout"><div><div class="tag">1 • WHERE TO WATCH ?</div><h2>Only on Netflix. Not free.</h2><p>You need a Netflix account. It costs about 8 euros per month. You can watch on phone, computer or TV.</p></div>
-<div class="side"><img src="https://media.themoviedb.org/t/p/w500/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg" alt="Poster = Netflix series" style="object-position:center"><span>The series is a Netflix original</span></div></div></div>
+<img class="bg" src="https://media.themoviedb.org/t/p/w500/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg" alt="Poster" style="object-position:center">
+<div class="cont"><div class="tag">1 • WHERE TO WATCH ?</div><h2>Only on Netflix. Not free.</h2><p>You need a Netflix account. It costs about 8 euros per month. You can watch on phone, computer or TV.</p></div></div>
 
 <div class="slide" data-fx="zoom">
-<img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series background">
-<div class="layout"><div><div class="tag">2 • EPISODES ?</div><h2>1 season. 4 episodes.</h2><p>Episode 1 = 65 min (arrest). Episode 2 = 51 min (school). Episode 3 = 52 min (psychologist). Episode 4 = 62 min (family). No season 2. Total = 4 hours.</p></div>
-<div class="side"><img src="https://media.themoviedb.org/t/p/w1280/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series image" style="object-position:center;height:300px"><span>4 episodes, one story</span></div></div></div>
+<img class="bg" src="https://media.themoviedb.org/t/p/w1280/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series image" style="object-position:center">
+<div class="cont"><div class="tag">2 • EPISODES ?</div><h2>1 season. 4 episodes.</h2><p>Episode 1 = 65 min (arrest). Episode 2 = 51 min (school). Episode 3 = 52 min (psychologist). Episode 4 = 62 min (family). No season 2. Total = 4 hours.</p></div></div>
 
 <div class="slide" data-fx="right">
-<img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series background">
-<div class="layout"><div><div class="tag">3 • STORY — ARREST + SCHOOL</div><h2>Jamie is 13. Police come.</h2><p>Morning, police break the door. Jamie is accused of killing Katie. He says "I did nothing". At school, inspectors find secret emojis and insults on Instagram. Cyberbullying.</p></div>
-<div class="side"><img src="https://media.themoviedb.org/t/p/w500/zdV9mPv6QD89jgdaqW3w9TEn5bA.jpg" alt="Owen Cooper as Jamie"><span>Owen Cooper = Jamie Miller, 13</span></div></div></div>
+<img class="bg" src="https://media.themoviedb.org/t/p/w500/zdV9mPv6QD89jgdaqW3w9TEn5bA.jpg" alt="Jamie">
+<div class="cont"><div class="tag">3 • STORY — ARREST + SCHOOL</div><h2>Jamie is 13. Police come.</h2><p>Morning, police break the door. Jamie is accused of killing Katie. He says "I did nothing". At school, inspectors find secret emojis and insults on Instagram. Cyberbullying.</p></div></div>
 
 <div class="slide" data-fx="up">
-<img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series background">
-<div class="layout"><div><div class="tag">3 • STORY — PSYCHOLOGIST</div><h2>52 minutes, one room.</h2><p>Briony talks with Jamie. First he is polite. Then he shouts. He says Katie was mean. He felt small. Most famous episode.</p></div>
-<div class="side"><img src="https://media.themoviedb.org/t/p/w500/brqo9iAILtnkWj1WaQKUCNxLGfQ.jpg" alt="Erin Doherty as Briony"><span>Erin Doherty = Briony, psychologist</span></div></div></div>
+<img class="bg" src="https://media.themoviedb.org/t/p/w500/brqo9iAILtnkWj1WaQKUCNxLGfQ.jpg" alt="Briony">
+<div class="cont"><div class="tag">3 • STORY — PSYCHOLOGIST</div><h2>52 minutes, one room.</h2><p>Briony talks with Jamie. First he is polite. Then he shouts. He says Katie was mean. He felt small. Most famous episode.</p></div></div>
 
 <div class="slide" data-fx="blur">
-<img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series background">
-<div class="layout"><div><div class="tag">3 • STORY — FAMILY</div><h2>One year later. Sad family.</h2><p>Jamie is in prison. Neighbours hate the family. Eddie fights, then cries in Jamie's room with the teddy bear. Very sad end.</p></div>
-<div class="side"><img src="https://media.themoviedb.org/t/p/w500/yguEO9zFvuccq87kOJpFLsmUgvs.jpg" alt="Stephen Graham as Eddie"><span>Stephen Graham = Eddie, the father</span></div></div></div>
+<img class="bg" src="https://media.themoviedb.org/t/p/w500/yguEO9zFvuccq87kOJpFLsmUgvs.jpg" alt="Eddie">
+<div class="cont"><div class="tag">3 • STORY — FAMILY</div><h2>One year later. Sad family.</h2><p>Jamie is in prison. Neighbours hate the family. Eddie fights, then cries in Jamie's room with the teddy bear. Very sad end.</p></div></div>
 
 <div class="slide" data-fx="zoom">
-<img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series background">
-<div class="layout"><div><div class="tag">4 • WHY I LIKE IT</div><h2>I love this series.</h2><p>Strong story. Great actors. Camera with no cut = stress. Lesson : words on internet can hurt. I recommend it.</p></div>
-<div class="side"><img src="https://media.themoviedb.org/t/p/w500/jSazpnwfMqbIuBGjnB8r0Yb5l7H.jpg" alt="Ashley Walters as inspector"><span>Ashley Walters = inspector Bascombe</span></div></div></div>
+<img class="bg" src="https://media.themoviedb.org/t/p/w500/jSazpnwfMqbIuBGjnB8r0Yb5l7H.jpg" alt="Inspector">
+<div class="cont"><div class="tag">4 • WHY I LIKE IT</div><h2>I love this series.</h2><p>Strong story. Great actors. Camera with no cut = stress. Lesson : words on internet can hurt. I recommend it.</p></div></div>
 
 <div class="slide" data-fx="fade">
-<img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series background">
-<div class="layout center"><div><div class="tag">THANK YOU !</div><h2>Any questions ?</h2><p>4 episodes. Netflix. Short and strong. I recommend it to the class.</p></div></div></div>
+<img class="bg" src="https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/llZodlkVKRkTdUsiRxvn8h80hhx.jpg" alt="Series">
+<div class="cont"><div class="tag">THANK YOU !</div><h2>Any questions ?</h2><p>4 episodes. Netflix. Short and strong. I recommend it to the class.</p></div></div>
 
 <div class="nav"><button class="prev" onclick="go(-1)">←</button><div style="opacity:.7">← → / space / click</div><button class="next" onclick="go(1)">→</button></div>
 <script>
